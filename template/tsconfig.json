@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "allowJs": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": false,
+    "declaration": false,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "outDir": "./tsc/test",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@UI/*": [
+        "Shopify-UI/*"
+      ]
+    }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "include": [
+    "typings/*.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "config/**/*.ts", "config/dev.env.js", "config/index.js", "config/prd.env.js", "config/pre.env.js", "config/sit.env.js", "src/apis/shipping.js", "src/language/de.js", "src/language/en.js", "src/language/fr.js", "src/language/zhCN.js", "src/pages/language/main.js", "src/site/us.js", "src/site/index.js", "src/site/fr.js", "src/site/au.js", "src/site/ca.js", "src/site/de.js", "src/site/en.js", "src/router.js",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

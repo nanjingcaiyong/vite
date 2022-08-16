@@ -1,0 +1,10 @@
+{
+  "name": "vue3-webpack",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "",
+  "scripts": {
+    "docs": "cd docs && gitbook serve",
+    "docs:deploy": "bash ./deploy-docs.sh"
+  }
+}

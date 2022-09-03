@@ -1,12 +1,12 @@
 import { createApp } from 'vue';
 import App from './app.vue';
-import createI18n from '@/site';
+import {initI18n, site} from '@/site';
 import 'tailwindcss/tailwind.css';
 
-
+console.log('站点配置', site)
 async function bootstrap () {
   const app = createApp(App);
-  app.use(createI18n());
+  app.use(initI18n());
   app.mount('#language');
 }
 

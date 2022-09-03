@@ -1,5 +1,7 @@
 {
-  "name": "vue-mpa",
+  "name": "{{ name }}",
+  "description": "{{ description }}",
+  "author": "{{ author }}",
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
@@ -24,7 +26,6 @@
     "mpa",
     "esm"
   ],
-  "author": "caiyong",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.26.1",

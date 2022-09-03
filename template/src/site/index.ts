@@ -33,7 +33,8 @@ export default () => {
   const siteName = getSiteName();
 
   return createI18n({
-    locale: siteName,
+    legacy: false,
+    locale: siteInfo[siteName].lang,
     messages: appendLanguage(siteName)
   });
 };

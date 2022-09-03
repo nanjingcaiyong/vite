@@ -1,7 +1,5 @@
 <template>
-  {{{{raw-loud}}}}
-  {{ $t('message') }}
-  {{{{/raw-loud}}}} 
+  \{{ $t('message') }} 
   <div class="flex">
     <button @click="setLangCodition('zhCN')">
       切换中文

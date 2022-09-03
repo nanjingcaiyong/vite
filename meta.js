@@ -1,5 +1,4 @@
 const path = require('path')
-const fs = require('fs')
 
 const {
   sortDependencies,
@@ -69,8 +68,8 @@ module.exports = {
   filters: {
     '.eslintrc.js': 'lint',
     '.eslintignore': 'lint',
-    '**/*.ts': 'ts',
-    '**/*.js': '!ts',
+    'src/**/*.ts': 'ts',
+    'src/**/*.js': '!ts',
     'typings/**/*': 'ts',
     'tsconfig.json': 'ts',
     'tailwind.config.js': 'tailwind'

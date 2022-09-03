@@ -2,7 +2,11 @@ import { createI18n } from 'vue-i18n';
 
 const languageFiles = require.context('@/language', true, /(?<!index)\.ts/);
 const sitefiles = require.context('.', true, /(?<!index)\.ts/);
-const defaultSite = 'fr';
+const defaultSite = 'www';
+
+const prefixReg = /[\.]\w+/g;
+const hostPrefix = window.location.host.replace(prefixReg, ''); 
+const siteName = window.location.protocol === 'https:' ? hostPrefix : defaultSite;
 
 const languages = languageFiles.keys()
   .reduce((obj, modulePath) => {
@@ -16,21 +20,13 @@ const sites = sitefiles.keys()
     return Object.assign({}, obj, { [moduleName]: sitefiles(modulePath)?.default });
   }, {});
 
-/**
- * @description 获取站点名字
- * @returns 
- */
-const getSiteName = () => {
-  const prefixReg = /[\.]\w+/g;
-  const hostPrefix = window.location.host.replace(prefixReg, ''); 
-  return window.location.protocol === 'https:' ? hostPrefix : defaultSite;
-};
 
-export default () => {
-  const siteName = getSiteName();
+export const initI18n = () => {
   return createI18n({
     legacy: false,
     locale: sites[siteName].lang,
     messages: languages
   });
 };
+
+export const site = sites[siteName];

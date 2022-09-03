@@ -1,3 +1,3 @@
 export default {
-  message: '你好老铁'
+  message: 'hello world'
 };

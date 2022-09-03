@@ -1,6 +1,5 @@
 <template>
   <div class="flex">
-    <!-- <p>{{ $t('message') }}</p> -->
     <button @click="setLangCodition('zhCN')">
       切换中文
     </button>

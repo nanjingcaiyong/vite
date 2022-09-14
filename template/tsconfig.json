@@ -1,55 +1,25 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "rootDir": ".",
-    "allowJs": true,
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "strict": true,
     "jsx": "preserve",
-    "sourceMap": false,
-    "declaration": false,
-    "removeComments": true,
+    "sourceMap": true,
     "resolveJsonModule": true,
+    "isolatedModules": true,
     "esModuleInterop": true,
-    "noImplicitAny": false,
-    "allowSyntheticDefaultImports": true,
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "outDir": "./tsc/test",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@components/*": [
-        "components/*"
-      ],
-      "@utils/*": [
-        "src/utils/*"
-      ],
-      "@UI/*": [
-        "Shopify-UI/*"
-      ]
-    }
-  },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true
   },
   "include": [
-    "typings/*.ts",
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
+    "src/**/*.ts", 
+    "src/**/*.d.ts", 
+    "src/**/*.tsx", 
+    "src/**/*.vue", 
     "config/**/*.ts",
+    "typings/**/*.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

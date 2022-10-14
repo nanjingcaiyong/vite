@@ -42,22 +42,12 @@ module.exports = {
       type: 'string',
       required: false,
       message: 'Project description',
-      default: 'A Vue3 MPA project',
+      default: 'A Vue3 project with vite',
     },
     author: {
       when: 'isNotTest',
       type: 'string',
       message: 'Author',
-    },
-    lint: {
-      when: 'isNotTest',
-      type: 'confirm',
-      message: 'Use ESLint to lint your code?',
-    },
-    ts: {
-      when: 'isNotTest',
-      type: 'confirm',
-      message: 'Use Typescript to constraint your code?',
     },
     tailwind: {
       when: 'isNotTest',
